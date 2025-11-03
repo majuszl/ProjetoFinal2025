@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+:root {
+    --azulclaro: #c4ecff;
+    --azulesc: #26156d;
+    --azulhover: #5833ea;
+    --branco: white;
+    --preto: black;
+}
+
+header {
+    background-color: var(--branco);
+    box-shadow: #2f303d25 2px 6px 5px;
+    padding-bottom: 10px;
+    gap: 50px;
+}
+
+.logo {
+    padding-top: 10px;
+    width: 100px;
+    margin-left: -60px;
+    padding-left: 70px;
+    margin-right: 800px;
+}
+
+.text-nav {
+    gap: 20px;
+    text-decoration: none;
+    align-items: center;
+    font-family: 'Microsoft JhengHei UI', sans-serif;
+    color: #000;
+    font-size: 15px;
+}
+
+.text-nav:hover {
+    color: var(--laranja);
+}
+
+.text-nav2 {
+    gap: 20px;
+    text-decoration: none;
+    align-items: center;
+    font-family: 'Microsoft JhengHei UI', sans-serif;
+    color: #000;
+    font-size: 15px;
+}
+
+.text-nav3 {
+    gap: 20px;
+    text-decoration: none;
+    align-items: center;
+    font-family: 'Microsoft JhengHei UI', sans-serif;
+    color: #000;
+    font-size: 15px;
+    border: 2px solid transparent; 
+}
+
+.text-nav3:hover {
+    color: var(--laranja);
+    background-color: var(--branco);
+    border-color: var(--laranja);
+}
+
+.banner {
+    width: 100%;
+
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .logo {
+        margin-right: 350px;
+    }
+    header {
+        position: relative;
+        gap: 30px;
+    }
+    .banner {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    header {
+        padding-bottom: 45px;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo {
+        padding-top: 22px;
+        width: 208px;
+        margin-right: 0px;
+    }
+    .banner {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
