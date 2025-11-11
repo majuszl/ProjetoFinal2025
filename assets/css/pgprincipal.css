@@ -98,7 +98,7 @@ header {
   transform: scale(1.2);
 } 
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
     background: linear-gradient(to right, var(--roxoescuro), var(--azulesc));
     color: var(--branco);
@@ -107,7 +107,14 @@ header {
 }
 
 .herotxt {
-    background: linear-gradient(to right, var(--roxoescuro), var(--azulclaro));
+    background: linear-gradient(to right, var(--azulesc), var(--roxoescuro), var(--azulclaro));
+    color: var(--branco);
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.heroimg {
+    background: linear-gradient(to right, var(--azulesc), var(--roxoescuro), var(--azulclaro));
     color: var(--branco);
     text-align: center;
     padding: 6rem 2rem;
@@ -149,7 +156,7 @@ header {
     transform: scale(1.05);
 }
 
-/* ===== CARTÕES ANIMADOS DO UIVERSE.IO ===== */
+/* CARTÕES ANIMADOS DO UIVERSE.IO */
 .flip-card {
   background-color: transparent;
   width: 190px;
@@ -282,11 +289,24 @@ header {
   right: 0;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 .section {
     padding: 4rem 2rem;
     max-width: 900px;
     margin: auto;
+}
+
+.sectionimg {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.sectionimg p {
+  font-size: 110px;
+  text-align: center;
+  color: var(--roxoescuro);
+  font-weight: bolder;
 }
 
 .section h3 {
@@ -314,29 +334,40 @@ header {
   border-radius: 120px;
 }
 
-.paiimg {
+.secpaiimg {
   background-color: var(--azulesc);
-  display: flex;               /* Usando Flexbox para alinhar os itens */
-  justify-content: center;     /* Centraliza as imagens horizontalmente */
-  align-items: center;         /* Alinha as imagens verticalmente */
-  gap: 50px;                   /* Espaço entre as imagens */
-  padding: 20px;               /* Espaçamento interno */
+  padding: 30px 0;
+}
+
+.secpaiimg h2 {
+  color: var(--branco);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.paiimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 85px;
+  padding: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
 .logoimg {
-  width: 100px;                /* Tamanho fixo das imagens */
-  height: 100px;               /* Mantém as imagens quadradas */
-  border-radius: 50%;          /* Faz as imagens ficarem redondas */
-  object-fit: cover;           /* Garante que a imagem cubra toda a área da div */
-  transition: transform 0.3s ease-in-out; /* Efeito de transição para hover */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  scroll-snap-align: center;
+  flex-shrink: 0;
 }
 
 .logoimg:hover {
   transform: scale(1.1);
-}
-
-.txtimg1 {
-  border-radius: 800px;
 }
 
 /* ===== FOOTER ===== */
@@ -382,5 +413,19 @@ footer {
     width: 80%;
     max-width: 300px;
   }
+  .paiimg {
+    flex-wrap: nowrap;
+  }
 
+  .logoimg {
+    width: 90px;
+    height: 90px;
+  }
+
+}
+
+@media (max-width: 1025px) {
+  .paiimg {
+    gap: 70px;
+  }
 }
