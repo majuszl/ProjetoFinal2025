@@ -125,7 +125,6 @@ header {
     justify-content: center;
     align-items: center;
     display: flex;
-    border-radius: 20%;
 }
 
 .hero-text button {
@@ -169,6 +168,18 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 320px) {
+
+}
+
+@media (max-width: 376px) {
+    .conexaoimg {
+        width: 300px;
+    }
 }
 
 @media (max-width: 768px) {

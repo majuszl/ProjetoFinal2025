@@ -106,6 +106,13 @@ header {
     padding: 6rem 2rem;
 }
 
+.herotxt {
+    background: linear-gradient(to right, var(--roxoescuro), var(--azulclaro));
+    color: var(--branco);
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
 .hero-text h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -119,6 +126,11 @@ header {
 .bolder {
     font-weight: bold;
     color: var(--roxoescuro);
+}
+
+.bolderesc {
+    font-weight: bold;
+    color: var(--azulesc);
 }
 
 .hero-text button {
@@ -143,7 +155,6 @@ header {
   width: 190px;
   height: 254px;
   perspective: 1000px;
-  font-family: sans-serif;
 }
 
 .pmenor {
@@ -284,9 +295,48 @@ header {
     text-align: center;
 }
 
+.section h4 {
+    color: var(--roxoescuro);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section h5 {
+    color: var(--azulesc);
+}
+
 .section p {
     line-height: 1.6;
     text-align: justify;
+}
+
+.maoimg {
+  border-radius: 120px;
+}
+
+.paiimg {
+  background-color: var(--azulesc);
+  display: flex;               /* Usando Flexbox para alinhar os itens */
+  justify-content: center;     /* Centraliza as imagens horizontalmente */
+  align-items: center;         /* Alinha as imagens verticalmente */
+  gap: 50px;                   /* Espaço entre as imagens */
+  padding: 20px;               /* Espaçamento interno */
+}
+
+.logoimg {
+  width: 100px;                /* Tamanho fixo das imagens */
+  height: 100px;               /* Mantém as imagens quadradas */
+  border-radius: 50%;          /* Faz as imagens ficarem redondas */
+  object-fit: cover;           /* Garante que a imagem cubra toda a área da div */
+  transition: transform 0.3s ease-in-out; /* Efeito de transição para hover */
+}
+
+.logoimg:hover {
+  transform: scale(1.1);
+}
+
+.txtimg1 {
+  border-radius: 800px;
 }
 
 /* ===== FOOTER ===== */
@@ -297,6 +347,16 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+@media (max-width: 426px) {
+  .flip-card {
+    width: 90%;
+  }
+  .maoimg {
+    width: 250px;
+  }
+}
+
 
 @media (max-width: 768px) {
     .nav-links {
@@ -311,4 +371,16 @@ footer {
     .section {
         padding: 3rem 1rem;
     }
+
+    .divdoscards {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;       
+    }
+
+  .flip-card {
+    width: 80%;
+    max-width: 300px;
+  }
+
 }
