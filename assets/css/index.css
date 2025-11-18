@@ -172,8 +172,10 @@ footer {
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 320px) {
-
+@media (max-width: 321px) {
+    .conexaoimg {
+        width: 315px;
+    }
 }
 
 @media (max-width: 376px) {

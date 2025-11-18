@@ -113,6 +113,13 @@ header {
     padding: 6rem 2rem;
 }
 
+.heroetica {
+    background: linear-gradient(to bottom, var(--roxoescuro), var(--azulclaro));
+    color: var(--branco);
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
 .heroimg {
     background: linear-gradient(to right, var(--azulesc), var(--roxoescuro), var(--azulclaro));
     color: var(--branco);
@@ -297,16 +304,45 @@ header {
 }
 
 .sectionimg {
-    padding: 4rem 2rem;
     max-width: 900px;
     margin: auto;
+    position: relative;
+    padding: 90px 0px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 300px;
 }
 
-.sectionimg p {
-  font-size: 110px;
+.sectionimg::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* substitui top/left/width/height */
+    background: var(--azulclaro);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.pcasos {
+  line-height: 1.6;
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.casosreais {
+  font-size: 90px;
   text-align: center;
-  color: var(--roxoescuro);
+  color: var(--azulesc);
   font-weight: bolder;
+  font-family: 'Poppins', sans-serif;
+}
+
+.incasosr {
+  font-size: 60px;
+  text-align: center;
+  color: var(--preto);
+  font-weight: bolder;
+  font-family: 'Poppins', sans-serif;
 }
 
 .section h3 {
@@ -379,12 +415,46 @@ footer {
     margin-top: 2rem;
 }
 
+@media (max-width: 321px) {
+  .imgprop {
+    width: 200px;
+  }
+  .casosreais {
+    font-size: 40px;
+  }
+  .incasosr {
+    font-size: 25px;
+  }
+  p {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .btnInicial {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+}
+
 @media (max-width: 426px) {
   .flip-card {
     width: 90%;
   }
   .maoimg {
     width: 250px;
+  }
+  .imgprop {
+    width: 300px;
+  }
+  .casosreais {
+    font-size: 40px;
+  }
+  .incasosr {
+    font-size: 30px;
+  }
+  p {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -416,12 +486,23 @@ footer {
   .paiimg {
     flex-wrap: nowrap;
   }
-
   .logoimg {
     width: 90px;
     height: 90px;
   }
-
+  .imgprop {
+    width: 500px;
+  }
+  .casosreais {
+    font-size: 70px;
+  }
+  .incasosr {
+    font-size: 50px;
+  }
+  p {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 @media (max-width: 1025px) {
