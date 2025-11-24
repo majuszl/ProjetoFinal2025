@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="funcionalidades.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/pgjogo.css">
+<title>Jogo de Perguntas</title>
+</head>
+
+<body>
+<div id="gameBox">
+    <h2 id="question">Carregando...</h2>
+    <button id="opt1" onclick="choose(0)">Opção 1</button>
+    <button id="opt2" onclick="choose(1)">Opção 2</button>
+    <div id="scoreBox"></div>
+    <a href="paginaetica.html" >VOLTAR</a>
+</div>
+
+<script>
+const questions = [
+    { q: "Quando você lê um texto inspirador, o que valoriza mais?", o: ["Clareza e precisão", "A subjetividade e os detalhes"], c: 0 },
+    { q: "Em um vídeo explicativo, qual estilo te chamaria mais atenção?", o: ["Um roteiro objetivo, direto e altamente otimizado", "Uma apresentação com personalidade própria e improviso"], c: 0 },
+    { q: "Se você fosse comprar uma arte digital, o que consideraria mais valioso?", o: ["A visão pessoal do artista e sua trajetória", "O fato de ser criada de forma inovadora, utilizando dos recursos mais avançados na atualidade"], c: 1 },
+    { q: "Em vídeos curtos (Reels, TikTok), o que te prende mais?", o: ["Edições automatizadas com ritmo perfeito e com base nas minhas preferências", "Vídeos criativos com improviso e humor natural"], c: 0 },
+    { q: "Em conteúdos para redes sociais, o que te chama mais atenção?", o: ["Publicações criadas por social medias com repertório cultural", "Postagens otimizadas com base em tendências em tempo real"], c: 1 },
+    { q: "Em campanhas de tráfego pago, que tipo de criativo te convence a clicar?", o: ["Criativos criados por IA após testar múltiplas combinações, deixando-o mais refinado", "Criativos idealizados por estrategistas humanos com insights de comportamento"], c: 0 },
+    { q: "Ao avaliar um planejamento de marketing, o que te parece mais confiável?", o: ["Estratégias criadas por profissionais humanos com experiência de mercado", "Dados e projeções criadas por IA com alta precisão analítica"], c: 1 },
+    { q: "Em vídeos publicitários, o que te impacta mais?", o: ["Roteiros otimizados por IA com narrativa eficiente", "Histórias desenvolvidas por criadores humanos com emoção e contexto"], c: 0 },
+    { q: "Para anúncios de produtos, qual estética te gera mais confiança?", o: ["Fotografias reais tiradas por profissionais", "Imagens de produto criadas por IA com perfeição visual"], c: 1 },
+    { q: "Quando você avalia uma campanha criativa, o que mais pesa na sua opinião?", o: ["A autenticidade das ideias aplicadas na estratégia aplicada", "A eficiência dos elementos, intencionalidade e precisão."], c: 1 }
+];
+
+let index = 0;
+let soma = 0;
+
+function loadQuestion() {
+    if (index >= questions.length) {
+        let porcentagem = Math.round((soma / questions.length) * 100);
+
+        document.getElementById("gameBox").innerHTML =
+            `<h2>Fim das perguntas!</h2>
+            <p style='font-size:22px;'>Segundo esse questionário você está <b>${porcentagem}%</b> adepto à inteligência artificial usada no marketing digital.</p>
+            <a href="paginaetica.html" >VOLTAR</a>`;
+        return;
+    }
+
+    let q = questions[index];
+    document.getElementById("question").innerText = q.q;
+    document.getElementById("opt1").innerText = q.o[0];
+    document.getElementById("opt2").innerText = q.o[1];
+    document.getElementById("scoreBox").innerText = `Pergunta ${index + 1} de ${questions.length}`;
+}
+
+// incrementando pontuação
+function choose(choice) {
+    if (choice === questions[index].c) {
+        soma++;
+    }
+    index++;
+    loadQuestion();
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>

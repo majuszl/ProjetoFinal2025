@@ -147,6 +147,12 @@ header {
     color: var(--azulesc);
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-text button {
     background-color: var(--branco);
     color: var(--azulesc);
@@ -191,7 +197,15 @@ header {
 
 .divdoscards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between !important;
+}
+
+.divdoscardsx {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .flip-card-inner {
@@ -329,8 +343,20 @@ header {
     padding-right: 50px;
 }
 
+.imgprop {
+  width: 300px;
+}
+
 .casosreais {
   font-size: 90px;
+  text-align: center;
+  color: var(--azulesc);
+  font-weight: bolder;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pmaior {
+  font-size: 60px;
   text-align: center;
   color: var(--azulesc);
   font-weight: bolder;
@@ -406,7 +432,7 @@ header {
   transform: scale(1.1);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
     background-color: var(--azulesc);
     color: var(--branco);
@@ -415,9 +441,11 @@ footer {
     margin-top: 2rem;
 }
 
-@media (max-width: 321px) {
+
+/* RESPONSIVIDADE */
+@media (min-width: 320px) and (max-width: 321px) {
   .imgprop {
-    width: 200px;
+    width: 220px;
   }
   .casosreais {
     font-size: 40px;
@@ -434,9 +462,21 @@ footer {
     justify-content: center;
     display: flex;
   }
+  .pmaior {
+    font-size: 30px;
+  }
 }
 
-@media (max-width: 426px) {
+@media (min-width: 375px) and (max-width: 376px) {
+  .imgprop {
+    width: 280px;
+  }
+  .pmaior {
+    font-size: 40px !important;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 426px) {
   .flip-card {
     width: 90%;
   }
@@ -444,7 +484,7 @@ footer {
     width: 250px;
   }
   .imgprop {
-    width: 300px;
+    width: 325px;
   }
   .casosreais {
     font-size: 40px;
@@ -458,9 +498,8 @@ footer {
   }
 }
 
-
-@media (max-width: 768px) {
-    .nav-links {
+@media (min-width: 768px) and (max-width: 1025px) {
+  .nav-links {
         flex-direction: column;
         gap: 0.5rem;
     }
@@ -479,34 +518,37 @@ footer {
       gap: 20px;       
     }
 
-  .flip-card {
-    width: 80%;
-    max-width: 300px;
-  }
-  .paiimg {
-    flex-wrap: nowrap;
-  }
-  .logoimg {
-    width: 90px;
-    height: 90px;
-  }
-  .imgprop {
-    width: 500px;
-  }
-  .casosreais {
-    font-size: 70px;
-  }
-  .incasosr {
-    font-size: 50px;
-  }
-  p {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+    .flip-card {
+      width: 80%;
+      max-width: 300px;
+    }
+    .paiimg {
+      flex-wrap: nowrap;
+    }
+    .logoimg {
+      width: 90px;
+      height: 90px;
+    }
+    .imgprop {
+      width: 600px;
+    }
+    .casosreais {
+      font-size: 70px;
+    }
+    .incasosr {
+      font-size: 50px;
+    }
+    p {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 }
 
-@media (max-width: 1025px) {
+@media (min-width: 1025px) {
   .paiimg {
     gap: 70px;
+  }
+  .imgprop {
+   width: 800px; 
   }
 }

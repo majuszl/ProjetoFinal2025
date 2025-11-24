@@ -1,0 +1,62 @@
+* {
+    text-decoration: none;
+}
+
+:root {
+    --azulclaro: #c4ecff;
+    --azulesc: #26156d;
+    --azulhover: #5833ea;
+    --roxoescuro: #6300da;
+    --branco: white;
+    --preto: black;
+    --fonte: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(../img/fundo.png);
+    font-family: var(--fonte);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#gameBox {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px #0002;
+    text-align: center;
+}
+
+h2 {
+    color: var(--azulesc);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background: var(--roxoescuro);
+    color: var(--branco);
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--azulhover);
+}
+
+#scoreBox {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--azulesc);
+}
